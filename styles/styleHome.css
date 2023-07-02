@@ -230,6 +230,11 @@
 }
 
 @media (min-device-width: 320px) and (max-device-width: 700px) {
+    .alignedToEnd{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
     .title-home{
         font-size: 55px;
     }
@@ -244,5 +249,24 @@
     }
     .position-image-gallery{
         right:10px;
+    }
+    .columns{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .card-input{
+        background-color: #363636b2;
+        filter: blur(0.5px);
+    }
+    .btn-first-row{
+        background-color: #2c2c2cf5;
+    }
+    .header{
+        height:20vh;
+    }
+    .alignedMobile{
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 }

@@ -31,7 +31,7 @@ function scrollToOption(element){
     <div class="header">
         <div class="container">
             <div class="columns">
-                <div class="column is-half">
+                <div class="column is-half alignedMobile">
                     <h2 class="pretendToLogo">
                         Logo
                     </h2>
