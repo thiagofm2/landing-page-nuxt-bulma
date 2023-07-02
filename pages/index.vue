@@ -1,5 +1,4 @@
 <script setup>
-import header from '../components/header.vue';
 import { ref } from 'vue';
 import axios from 'axios';
 
@@ -13,7 +12,7 @@ const infosField = ref(
 
 function scrollToForm(){
     window.scrollTo({
-        top: document.getElementById('form').offsetTop,
+        top: document.getElementById('ipsum').offsetTop,
         left: 0,
         behavior: "smooth",
     });
@@ -30,11 +29,10 @@ async function simulatePost(){
 
 <template>
     <div>
-        <div class="first-row alignVertical">
-        <header/>
-
+        <div class="first-row">
+            <Header/>
             <div class="container ">
-                <div class="columns">
+                <div class="columns alignVertical">
                     <div class="column is-half">
                         <h1 class="title-home">
                             Thiago Faria Moreira LP
@@ -59,12 +57,12 @@ async function simulatePost(){
                     <div
                     class="column is-half alignedToTop"
                     >
-                        <div>
-                            <h1 class="titleSection">
+                        <div class="sizeMobile">
+                            <h1 class="titleSection" data-aos="fade-up" data-aos-delay="400">
                                 Lorem
                             </h1>
-                            <div class="line-separator"/>
-                            <p>
+                            <div class="line-separator" data-aos="fade-up" data-aos-delay="400"/>
+                            <p data-aos="fade-up" data-aos-delay="400">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -74,6 +72,7 @@ async function simulatePost(){
                                 culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                             <button
+                            data-aos="fade-up" data-aos-delay="400"
                             @click="scrollToForm()"
                             class="btn-cta">
                                 Lorem ipsum
@@ -86,9 +85,11 @@ async function simulatePost(){
                     </div>
                     <div class="column is-half alignToCenter">
                         <img
+                        data-aos="fade-up" data-aos-delay="400"
                         src="../assets/banner-vertical.png"
                         />
-                        <img
+                        <img id="lorem"
+                        data-aos="fade-up" data-aos-delay="900"
                         class="position-image-gallery"
                         src="../assets/banner-vertical2.png"
                         />
@@ -98,16 +99,16 @@ async function simulatePost(){
         </div>
 
         <div class="section" style="padding-bottom:0px">
-            <div class="row-input" id="form">
+            <div class="row-input" id="ipsum">
                 <div class="container">
                     <div class="columns">
                         <div class="column is-half alignedToTop">
                             <div class="input-infos">
-                                <h1 class="titleSection-input">
+                                <h1 class="titleSection-input" data-aos="fade-up" data-aos-delay="300">
                                     Ipsum
                                 </h1>
-                                <div class="line-separator-input"/>
-                                <p style="color:#d8d8d8">
+                                <div class="line-separator-input" data-aos="fade-up" data-aos-delay="400"/>
+                                <p style="color:#d8d8d8" data-aos="fade-up" data-aos-delay="500">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -116,7 +117,7 @@ async function simulatePost(){
                                 </p>
                             </div>
                         </div>
-                        <div class="column is-half alignToCenter">
+                        <div class="column is-half alignToCenter" data-aos="fade-in" data-aos-delay="800">
                             <div class="card-input alignToCenter">
                                 <input
                                 v-model="infosField.name"
@@ -141,5 +142,6 @@ async function simulatePost(){
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
 </template>
